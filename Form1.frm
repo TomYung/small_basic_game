@@ -1,7 +1,7 @@
 VERSION 5.00
 Begin VB.Form Form1 
    BackColor       =   &H00FFFFFF&
-   Caption         =   "Ğ¡ÓÎÏ·"
+   Caption         =   "å°æ¸¸æˆ"
    ClientHeight    =   3915
    ClientLeft      =   120
    ClientTop       =   450
@@ -13,7 +13,7 @@ Begin VB.Form Form1
    Moveable        =   0   'False
    ScaleHeight     =   3915
    ScaleWidth      =   5955
-   StartUpPosition =   1  'ËùÓĞÕßÖĞĞÄ
+   StartUpPosition =   1  'æ‰€æœ‰è€…ä¸­å¿ƒ
    Begin VB.TextBox Text5 
       Height          =   1575
       Left            =   1800
@@ -25,7 +25,7 @@ Begin VB.Form Form1
    End
    Begin VB.TextBox Text4 
       BeginProperty Font 
-         Name            =   "ËÎÌå"
+         Name            =   "å®‹ä½“"
          Size            =   14.25
          Charset         =   134
          Weight          =   700
@@ -41,7 +41,7 @@ Begin VB.Form Form1
    End
    Begin VB.TextBox Text3 
       BeginProperty Font 
-         Name            =   "ËÎÌå"
+         Name            =   "å®‹ä½“"
          Size            =   14.25
          Charset         =   134
          Weight          =   700
@@ -57,7 +57,7 @@ Begin VB.Form Form1
    End
    Begin VB.TextBox Text2 
       BeginProperty Font 
-         Name            =   "ËÎÌå"
+         Name            =   "å®‹ä½“"
          Size            =   14.25
          Charset         =   134
          Weight          =   700
@@ -73,7 +73,7 @@ Begin VB.Form Form1
    End
    Begin VB.TextBox Text1 
       BeginProperty Font 
-         Name            =   "ËÎÌå"
+         Name            =   "å®‹ä½“"
          Size            =   14.25
          Charset         =   134
          Weight          =   700
@@ -88,7 +88,7 @@ Begin VB.Form Form1
       Width           =   2535
    End
    Begin VB.CommandButton Command6 
-      Caption         =   "Çå¿ÕÌáÊ¾¿ò"
+      Caption         =   "æ¸…ç©ºæç¤ºæ¡†"
       Height          =   495
       Left            =   120
       TabIndex        =   5
@@ -96,7 +96,7 @@ Begin VB.Form Form1
       Width           =   1455
    End
    Begin VB.CommandButton Command5 
-      Caption         =   "Çå³ıÊı×Ö"
+      Caption         =   "æ¸…é™¤æ•°å­—"
       Height          =   495
       Left            =   120
       TabIndex        =   4
@@ -104,7 +104,7 @@ Begin VB.Form Form1
       Width           =   1455
    End
    Begin VB.CommandButton Command4 
-      Caption         =   "ÏÔÊ¾´ğ°¸"
+      Caption         =   "æ˜¾ç¤ºç­”æ¡ˆ"
       Height          =   495
       Left            =   120
       TabIndex        =   3
@@ -112,7 +112,7 @@ Begin VB.Form Form1
       Width           =   1455
    End
    Begin VB.CommandButton Command3 
-      Caption         =   "ÍË³ö"
+      Caption         =   "é€€å‡º"
       Height          =   495
       Left            =   120
       TabIndex        =   2
@@ -120,7 +120,7 @@ Begin VB.Form Form1
       Width           =   1455
    End
    Begin VB.CommandButton Command2 
-      Caption         =   "È·¶¨"
+      Caption         =   "ç¡®å®š"
       Height          =   495
       Left            =   120
       TabIndex        =   1
@@ -128,7 +128,7 @@ Begin VB.Form Form1
       Width           =   1455
    End
    Begin VB.CommandButton Command1 
-      Caption         =   "¿ªÊ¼ÓÎÏ·/ÖØÖÃ"
+      Caption         =   "å¼€å§‹æ¸¸æˆ/é‡ç½®"
       Height          =   495
       Left            =   120
       TabIndex        =   0
@@ -156,7 +156,7 @@ j = 0
 If Text1.Text = "" Or Text2.Text = "" Or Text3.Text = "" Or Text4.Text = "" Then
 Form2.Show
 Else
-Open "D:\smallgame\ÓÎÏ·.txt" For Input As #1
+Open "D:\smallgame\æ¸¸æˆ.txt" For Input As #1
 d = Input(1, #1)
 e = Input(1, #1)
 f = Input(1, #1)
@@ -189,7 +189,7 @@ End If
 If g = Text1.Text Or g = Text2.Text Or g = Text3.Text Or g = Text4.Text Then
 j = j + 1
 End If
-Text5.Text = Text5.Text & "ÓĞ" & h & "¸öÎ»ÖÃ¶ÔÁË£¬" & "°üº¬" & j & "¸öÏàÍ¬Êı×Ö" & vbCrLf
+Text5.Text = Text5.Text & "æœ‰" & h & "ä¸ªä½ç½®å¯¹äº†ï¼Œ" & "åŒ…å«" & j & "ä¸ªç›¸åŒæ•°å­—" & vbCrLf
 End If
 Close
 End Sub
@@ -226,13 +226,13 @@ y = Int(Rnd() * 9 + 1)
 z = Int(Rnd() * 9 + 1)
 Loop
 b = w * 1000 + x * 100 + y * 10 + z
-Open "D:\smallgame\ÓÎÏ·.txt" For Output As #1
+Open "D:\smallgame\game.txt" For Output As #1
 Print #1, b
 Close
 End Sub
 Private Sub Command4_Click()
 Dim i As Single
-Open "D:\smallgame\ÓÎÏ·.txt" For Input As #1
+Open "D:\smallgame\game.txt" For Input As #1
 i = Input(4, #1)
 Label1 = i
 Close
